@@ -1,14 +1,24 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- Estilos iconos de Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
 
     <!-- Estilos -->
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.css" />
 
     <!-- Scripts -->
     <script src="main.js" defer></script>
@@ -17,32 +27,37 @@
   </head>
   <body>
     <header class="header">
-        <div class="bg-dark py-2">
-            <div class="container">
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                    <div class="container-fluid">
-                      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="#">Nutrición</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="#">Planes</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Contacto</a>
-                            </li>
-                        </ul>
-                      </div>
-                    </div>
-                </nav>
+      <div class="bg-dark py-2">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <div
+                class="collapse navbar-collapse justify-content-center"
+                id="navbarNav"
+              >
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"
+                      >Inicio</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Nutrición</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Planes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contacto</a>
+                  </li>
+                </ul>
+              </div>
             </div>
+          </nav>
         </div>
+      </div>
     </header>
-    
+
     <main class="main-content">
       <section class="container">
         <div class="row py-4">
@@ -51,58 +66,133 @@
               <fieldset>
                 <legend class="h2 text-center">Calculadora de Calorías</legend>
                 <div class="mb-3">
-                  <label for="edad" class="form-label h6">Edad</label>
-                  <input type="number" id="edad" class="form-control" min="15" max="80" placeholder="Digíte su edad">
+                  <label for="nombre" class="form-label h6">Nombre</label>
+                  <input
+                    type="text"
+                    id="nombre"
+                    class="form-control"
+                    placeholder="Digíte su nombre completo"
+                  />
                 </div>
-
+                <div class="mb-3">
+                  <label for="tipoDocumento" class="form-label h6"
+                    >Tipo de Documento</label
+                  >
+                  <select id="tipoDocumento" class="form-select">
+                    <option value="">Seleccione un tipo de documento</option>
+                    <option value="CC">Cédula de Ciudadanía</option>
+                    <option value="TI">Tarjeta de Identidad</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="numeroDocumento" class="form-label h6"
+                    >Número de Documento</label
+                  >
+                  <input
+                    type="number"
+                    id="numeroDocumento"
+                    class="form-control"
+                    placeholder="Digíte su número de documento"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="edad" class="form-label h6">Edad</label>
+                  <input
+                    type="number"
+                    id="edad"
+                    class="form-control"
+                    min="15"
+                    max="80"
+                    placeholder="Digíte su edad"
+                  />
+                </div>
                 <div class="mb-3">
                   <label for="peso" class="form-label h6">Peso</label>
-                  <input type="number" id="peso" class="form-control" placeholder="Digíte su peso en kilogramos">
+                  <input
+                    type="number"
+                    id="peso"
+                    class="form-control"
+                    placeholder="Digíte su peso en kilogramos"
+                  />
                 </div>
 
                 <div class="mb-3">
                   <label for="altura" class="form-label h6">Altura</label>
-                  <input type="number" id="altura" class="form-control" placeholder="Digíte su altura en centímetros">
+                  <input
+                    type="number"
+                    id="altura"
+                    class="form-control"
+                    placeholder="Digíte su altura en centímetros"
+                  />
                 </div>
 
                 <div class="mb-3">
-                  <label for="actividad" class="form-label h6">Actividad física</label>
+                  <label for="actividad" class="form-label h6"
+                    >Actividad física</label
+                  >
                   <select id="actividad" class="form-select">
-                    <option></option>
+                    <option value="">Seleccione un tipo de actividad</option>
                     <option value="1.2">Poco o ningún ejercicio</option>
-                    <option value="1.375">Ejercicio ligero (1-3 días a la semana)</option>
-                    <option value="1.55">Ejercicio moderado (3-5 días a la semana)</option>
-                    <option value="1.725">Ejercicio fuerte (6-7 días a la semana)</option>
-                    <option value="1.9">Ejercicio muy fuerte (dos veces al día, entrenamientos muy duros)</option>
+                    <option value="1.375">
+                      Ejercicio ligero (1-3 días a la semana)
+                    </option>
+                    <option value="1.55">
+                      Ejercicio moderado (3-5 días a la semana)
+                    </option>
+                    <option value="1.725">
+                      Ejercicio fuerte (6-7 días a la semana)
+                    </option>
+                    <option value="1.9">
+                      Ejercicio muy fuerte (dos veces al día, entrenamientos muy
+                      duros)
+                    </option>
                   </select>
                 </div>
-                
+
                 <section class="row m-2 h-100">
                   <span class="h6 p-0">Sexo</span>
                   <div class="form-check">
-                    <input class="form-check-input" value="F" type="radio" name="genero" id="femenino" checked>
+                    <input
+                      class="form-check-input"
+                      value="F"
+                      type="radio"
+                      name="genero"
+                      id="femenino"
+                      checked
+                    />
                     <label class="form-check-label" for="femenino">
                       Femenino
                     </label>
                   </div>
 
                   <div class="form-check">
-                    <input class="form-check-input" value="M" type="radio" name="genero" id="masculino">
+                    <input
+                      class="form-check-input"
+                      value="M"
+                      type="radio"
+                      name="genero"
+                      id="masculino"
+                    />
                     <label class="form-check-label" for="masculino">
                       Masculino
                     </label>
                   </div>
                 </section>
-                <hr>
+                <hr />
                 <div class="d-flex justify-content-center my-3">
-                  <button type="submit" class="btn btn-danger w-75" style="font-size: 1.5rem">Calcular</button>
+                  <button
+                    type="submit"
+                    class="btn btn-danger w-75"
+                    style="font-size: 1.5rem"
+                  >
+                    Calcular
+                  </button>
                 </div>
               </fieldset>
             </form>
           </div>
 
-          <article class="card col" id="resultado">
-          </article>
+          <article class="col" id="resultado"></article>
         </div>
       </section>
     </main>
@@ -110,12 +200,26 @@
     <footer class="footer row p-3">
       <div class="col d-flex justify-content-right align-items-center">
         <ul>
-          <li>✖️ <a href="#">Instagram</a></li>
-          <li>✖️ <a href="#">Facebook</a></li>
-          <li>✖️ <a href="#">Telegram</a></li>
+          <li>
+            <i class="bi bi-instagram"></i>
+            <a
+              href="https://www.instagram.com/peaku_talent/?hl=es"
+              target="_blank"
+              >Instagram</a
+            >
+          </li>
+          <li>
+            <i class="bi bi-facebook rounded-2"></i>
+            <a
+              href="https://www.facebook.com/peakutalent/?locale=es_LA"
+              target="_blank"
+              >Facebook</a
+            >
+          </li>
+          <li><i class="bi bi-telegram"></i> <a href="#">Telegram</a></li>
         </ul>
       </div>
-      
+
       <div class="col d-flex justify-content-right align-items-center">
         <ul>
           <li><a href="#">Servicios</a></li>
@@ -124,15 +228,28 @@
         </ul>
       </div>
 
-      <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
-        <p class="m-0"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero optio voluptate qui adipisci, hic voluptatibus totam dolorem cumque repellendus amet! Repudiandae, ab error unde porro sint fugit qui temporibus, consequatur dolores sit quas perspiciatis omnis magnam iure ut, quod dignissimos molestias voluptas architecto nam! Accusantium corporis sit eos dolorum accusamus.</span></p>
+      <div
+        class="col-12 col-md-6 d-flex justify-content-center align-items-center"
+      >
+        <p class="m-0">
+          <span
+            >La tasa metabólica basal (TMB) es la cantidad mínima de energía que
+            necesita tu cuerpo para sobrevivir realizando las funciones básicas,
+            tales como respirar, parpadear, filtrar la sangre, regular la
+            temperatura del cuerpo o sintetizar hormonas. Ten en cuenta que,
+            aparte de la alimentación, es importante practicar ejercicio de
+            forma regular y tener hábitos de vida saludables para mantenerte en
+            forma.</span
+          >
+        </p>
       </div>
     </footer>
 
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
