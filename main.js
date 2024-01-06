@@ -81,23 +81,18 @@ function grupoPoblacional(datos) {
 function mostrarResultado(datos, calculoCalorias) {
   const grupo = grupoPoblacional(datos);
   resultado.innerHTML = `<div id="calculo" class="d-flex flex-column justify-content-center align-items-center h-100">
-  <div class="card text-center">
-    <div class="card-header">
-    Resultados
-    </div>
-    <div class="card-body">
-      <p class="card-text">El paciente ${datos.nombre} identificado con ${
-    datos.tipoDocumento
-  }N°. ${datos.numeroDocumento}, requiere un total de ${Math.floor(
-    calculoCalorias
-  )} kcal para el sostenimiento de su TBM</p>
-  <p>El paciente pertenece al grupo poblacional: ${grupo} </p>
-    </div>
-    <div class="card-footer text-body-secondary">
+  <div class="card text-bg-dark mb-3">
+    <div class="card-body text-center">
+      <div><h5 class="card-title pb-4 pt-2">RESULTADOS</h5></div>
+      <p class="card-text pb-2">El paciente <strong>${datos.nombre}
+      </strong> identificado con ${datos.tipoDocumento} 
+      N°. ${datos.numeroDocumento}, requiere un total de 
+      ${Math.floor(calculoCalorias)} kcal para el 
+      sostenimiento de su TBM.</p>
+      <div><p>El paciente pertenece al grupo poblacional: <strong>${grupo}</strong></p></div>
     </div>
   </div>
-</div>
-`;
+  </div>`;
   aparecerResultado();
   formularioCalculadora.reset();
 }
