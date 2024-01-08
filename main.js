@@ -57,7 +57,6 @@ function calcularCalorias(datos) {
     altura: 6.25,
     edad: 5,
   };
-
   let calculoCalorias =
     datos.actividad *
       (multiplicadorTMB.peso * datos.peso +
@@ -68,14 +67,9 @@ function calcularCalorias(datos) {
   return calculoCalorias;
 }
 function grupoPoblacional(datos) {
-  let grupoPoblacional = "Adultos mayores";
-
-  if (datos.edad >= 15 && datos.edad <= 29) {
-    grupoPoblacional = "Joven";
-  } else if (datos.edad >= 30 && datos.edad <= 59) {
-    grupoPoblacional = "Adultos";
-  }
-  return grupoPoblacional;
+  if (datos.edad >= 15 && datos.edad <= 29) return "Joven";
+  if (datos.edad >= 30 && datos.edad <= 59) return "Adultos";
+  return "Adultos mayores";
 }
 
 function mostrarResultado(datos, calculoCalorias) {
