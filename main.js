@@ -1,13 +1,5 @@
 const formularioCalculadora = document.getElementById("formulario-calculadora");
 const resultado = document.getElementById("resultado");
-const nombre = document.querySelector("#nombre");
-const tipoDocumento = document.querySelector("#tipoDocumento");
-const numeroDocumento = document.querySelector("#numeroDocumento");
-const edad = document.querySelector("#edad");
-const peso = document.querySelector("#peso");
-const altura = document.querySelector("#altura");
-const actividad = document.querySelector("#actividad");
-const genero = document.querySelector('input[name="genero"]:checked');
 
 formularioCalculadora.addEventListener("submit", (evento) => {
   evento.preventDefault();
@@ -15,7 +7,8 @@ formularioCalculadora.addEventListener("submit", (evento) => {
 });
 
 function generarCalculoCalorias() {
-  const datos = capturarDatos();
+  const campos = capturarCampos();
+  const datos = capturarDatos(campos);
   if (!validarCampos(datos)) {
     mostrarMensajeDeError("Por favor asegúrese de llenar todos los campos");
     return;
@@ -24,16 +17,30 @@ function generarCalculoCalorias() {
   mostrarResultado(datos, calculo);
 }
 
-function capturarDatos() {
+function capturarCampos() {
+  const campos = {
+    nombre: document.querySelector("#nombre"),
+    tipoDocumento: document.querySelector("#tipoDocumento"),
+    numeroDocumento: document.querySelector("#numeroDocumento"),
+    edad: document.querySelector("#edad"),
+    peso: document.querySelector("#peso"),
+    altura: document.querySelector("#altura"),
+    actividad: document.querySelector("#actividad"),
+    genero: document.querySelector('input[name="genero"]:checked'),
+  };
+  return campos;
+}
+
+function capturarDatos(campos) {
   const datos = {
-    nombre: nombre.value,
-    tipoDocumento: tipoDocumento.value,
-    numeroDocumento: numeroDocumento.value,
-    edad: edad.value,
-    peso: peso.value,
-    altura: altura.value,
-    actividad: actividad.value,
-    genero: genero.id,
+    nombre: campos.nombre.value,
+    tipoDocumento: campos.tipoDocumento.value,
+    numeroDocumento: campos.numeroDocumento.value,
+    edad: campos.edad.value,
+    peso: campos.peso.value,
+    altura: campos.altura.value,
+    actividad: campos.actividad.value,
+    genero: campos.genero.id,
   };
   return datos;
 }

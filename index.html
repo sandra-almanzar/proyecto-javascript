@@ -74,27 +74,30 @@
                     placeholder="Digíte su nombre completo"
                   />
                 </div>
-                <div class="mb-3">
-                  <label for="tipoDocumento" class="form-label h6"
-                    >Tipo de Documento</label
-                  >
-                  <select id="tipoDocumento" class="form-select">
-                    <option value="">Seleccione un tipo de documento</option>
-                    <option value="CC">Cédula de Ciudadanía</option>
-                    <option value="TI">Tarjeta de Identidad</option>
-                  </select>
+                <div class="row">
+                  <div class="mb-3 col-4">
+                    <label for="tipoDocumento" class="form-label h6"
+                      >Tipo de Documento</label
+                    >
+                    <select id="tipoDocumento" class="form-select">
+                      <option value="">Seleccione tipo Doc</option>
+                      <option value="CC">Cédula de Ciudadanía</option>
+                      <option value="TI">Tarjeta de Identidad</option>
+                    </select>
+                  </div>
+                  <div class="mb-3 ps-0 col">
+                    <label for="numeroDocumento" class="form-label h6"
+                      >Número de Documento</label
+                    >
+                    <input
+                      type="number"
+                      id="numeroDocumento"
+                      class="form-control"
+                      placeholder="Digíte su número de documento"
+                    />
+                  </div>
                 </div>
-                <div class="mb-3">
-                  <label for="numeroDocumento" class="form-label h6"
-                    >Número de Documento</label
-                  >
-                  <input
-                    type="number"
-                    id="numeroDocumento"
-                    class="form-control"
-                    placeholder="Digíte su número de documento"
-                  />
-                </div>
+
                 <div class="mb-3">
                   <label for="edad" class="form-label h6">Edad</label>
                   <input
@@ -151,31 +154,33 @@
 
                 <section class="row m-2 h-100">
                   <span class="h6 p-0">Sexo</span>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      value="F"
-                      type="radio"
-                      name="genero"
-                      id="femenino"
-                      checked
-                    />
-                    <label class="form-check-label" for="femenino">
-                      Femenino
-                    </label>
-                  </div>
+                  <div class="d-flex flex-row p-0">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        value="F"
+                        type="radio"
+                        name="genero"
+                        id="femenino"
+                        checked
+                      />
+                      <label class="form-check-label pe-4" for="femenino">
+                        Femenino
+                      </label>
+                    </div>
 
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      value="M"
-                      type="radio"
-                      name="genero"
-                      id="masculino"
-                    />
-                    <label class="form-check-label" for="masculino">
-                      Masculino
-                    </label>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        value="M"
+                        type="radio"
+                        name="genero"
+                        id="masculino"
+                      />
+                      <label class="form-check-label" for="masculino">
+                        Masculino
+                      </label>
+                    </div>
                   </div>
                 </section>
                 <hr />
